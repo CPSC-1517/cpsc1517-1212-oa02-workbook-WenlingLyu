@@ -36,7 +36,7 @@ internal class Course
             CourseNo = courseNo;
         }
 
-        //Validate that courseName are not null or an empty string
+        //Validate that courseName are not null or an empty string.
         if (string.IsNullOrEmpty(courseName))
         {
             throw new ArgumentNullException("CourseName is required.");
