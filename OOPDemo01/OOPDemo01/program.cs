@@ -20,7 +20,7 @@ cpsc1517Course.AddStudent("Wenling Lyu");
 cpsc1517Course.AddStudent("Hamza Said");
 cpsc1517Course.AddStudent("Sam Wu");
 cpsc1517Course.AddStudent("Willow Liu");
-*/
+**/
 
 //Should have a @ for the filepath
 cpsc1517Course.LoadFromFile(@"D:\CPSC1517\Git-CPSC1517\students.txt");
