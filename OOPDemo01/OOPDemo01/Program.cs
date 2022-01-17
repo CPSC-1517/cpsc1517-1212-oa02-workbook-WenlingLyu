@@ -35,7 +35,34 @@ foreach (var currentStudent in cpsc1517Course.Students)
 cpsc1517Course.RemoveStudent("Aron Fong");
 cpsc1517Course.RemoveStudent("Hamza Said");
 
-//Display the number of students
-WriteLine($"There are now {cpsc1517Course.StudentCount} students");
-//Try this
+        }
+    }
+    #endregion
+
+    public string CourseInfo()
+    {
+        return $"{CourseNo}:{CourseName}";
+    }
+
+
+    #region Instance-Level Methods
+    public void AddStudent(string name)
+    {
+        Students.Add(name);
+    }
+
+    public void DropStudent(string name)
+    {
+        Students.Remove(name);
+    }
+    #endregion
+    /*
+    public int StudentCount(int studentCount)
+    {
+        
+        return studentCount;
+    }*/
+}
+
+
 
