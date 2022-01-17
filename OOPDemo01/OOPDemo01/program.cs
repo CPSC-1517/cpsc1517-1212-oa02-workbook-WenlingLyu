@@ -14,7 +14,7 @@ WriteLine($"CourseNo:{cpsc1517Course.CourseNo}");
 WriteLine($"CourseName:{cpsc1517Course.CourseName}");
 */
 //Add some students to the course
-/**
+/*
 cpsc1517Course.AddStudent("Aron Fong");
 cpsc1517Course.AddStudent("Wenling Lyu");
 cpsc1517Course.AddStudent("Hamza Said");
