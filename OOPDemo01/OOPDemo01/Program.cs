@@ -1,78 +1,41 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using OOPDemo01;
+using static System.Console;//Allows you to access the static methods in Console class direction
 
-// Define a new custom class named Course
-internal class Course
+Course cpsc1517Course = new Course("CPSC1517", "Introduction to Application Development");
+//var cpsc1517Course = new Course("CPSC1517", "Introduction to Application Development");
+//Course cpsc1517Course = new Course("CPSC1517", "Introduction to Application Development");
+/*
+WriteLine($"CourseNo:{cpsc1517Course.CourseNo}");
+WriteLine($"CourseName:{cpsc1517Course.CourseName}");
+*/
+//Add some students to the course
+/*
+cpsc1517Course.AddStudent("Aron Fong");
+cpsc1517Course.AddStudent("Wenling Lyu");
+cpsc1517Course.AddStudent("Hamza Said");
+cpsc1517Course.AddStudent("Sam Wu");
+cpsc1517Course.AddStudent("Willow Liu");
+*/
+
+//Should have a @ for the filepath
+cpsc1517Course.LoadFromFile(@"D:\CPSC1517\Git-CPSC1517\students.txt");
+
+//Display all the students in the course
+foreach (var currentStudent in cpsc1517Course.Students)
 {
-    #region Readonly Data Fields
-    //Define readonly date fields
-    public readonly string CourseNo;
-    public readonly string CourseName;
-    public readonly List<string> Students = new List<string>();
-    #endregion
-
-    #region Readonly Property
-    public int StudentCount 
-    { 
-        get { return Students.Count; }
-    }
-    #endregion
-
-    #region Constructors
-    public Course(string courseNo, string courseName)
-    {
-        //Validate that courseNo is not null, or an empty string, and must contains exactly 8 characters
-        //where the first 4 characters are letters and the last 4 characters are digits
-        if (string.IsNullOrEmpty(courseNo))
-        {
-            throw new ArgumentNullException("CourseNo is required.");
-        }
-        if(courseNo.Length != 8)
-        {
-            throw new ArgumentException("CourseNo must contains exactly 8 characters.");
-        }
-        //Challenge to vaildate the first four characters are letters and the last 4 are digits
-        else
-        {
-            CourseNo = courseNo;
-        }
-
-        //Validate that courseName are not null or an empty string.
-        if (string.IsNullOrEmpty(courseName))
-        {
-            throw new ArgumentNullException("CourseName is required.");
-        }
-        else
-        {
-            CourseName = courseName;
-
-        }
-    }
-    #endregion
-
-    public string CourseInfo()
-    {
-        return $"{CourseNo}:{CourseName}";
-    }
-
-
-    #region Instance-Level Methods
-    public void AddStudent(string name)
-    {
-        Students.Add(name);
-    }
-
-    public void DropStudent(string name)
-    {
-        Students.Remove(name);
-    }
-    #endregion
-    /*
-    public int StudentCount(int studentCount)
-    {
-        
-        return studentCount;
-    }*/
+    WriteLine(currentStudent);
 }
 
+//Remove 2 students from the course
+cpsc1517Course.RemoveStudent("Aron Fong");
+cpsc1517Course.RemoveStudent("Hamza Said");
+
+//Display the number of students
+WriteLine($"There are now {cpsc1517Course.StudentCount} students");
 
 
