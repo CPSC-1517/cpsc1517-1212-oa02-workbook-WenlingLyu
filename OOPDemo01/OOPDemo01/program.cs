@@ -37,5 +37,5 @@ cpsc1517Course.RemoveStudent("Hamza Said");
 
 //Display the number of students
 WriteLine($"There are now {cpsc1517Course.StudentCount} students");
-
+//Try 
 
