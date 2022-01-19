@@ -1,0 +1,16 @@
+﻿
+
+//举例仍然是给大学做管理系统
+//姓名、性别、年龄、年级
+string zsName = "ZS";
+int zsAge = 21;
+char zsGender = 'M';
+int zsGrade = '3';
+//为了存一个人的信息，声明了四个变量，麻jier烦
+
+//此时结构就出现了!
+
+结构： 可以帮助我们一次性声明多个不同类型的变量
+语法
+[public] struct 结构名 //结构名Parscle命名
+{}
