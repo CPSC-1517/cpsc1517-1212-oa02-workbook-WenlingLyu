@@ -1,0 +1,29 @@
+﻿
+1. 语法：
+ [public] enum 枚举名
+{
+  值1，
+  值2，
+  值3，
+  ...
+  值n
+}
+2. public：公开访问修饰符
+enum：keyword
+枚举名：符合Pascal规范（首字母大写）
+
+
+3. 枚举存在的意义 
+     xx大学管理系统 
+     包含： 姓名 性别 年龄 系别 年纪
+     性别比较特殊，因为每个人可能用不同的方式来存储性别
+     如：
+         程序员A 用 char gender = ‘男’
+         程序员B  用 char gender = ‘m’
+         程序员C  用 string gender = ‘dude’
+         标准难以统一
+  用枚举可以统一标准
+      
+4. 将enum 声明到 namespace 下， class上， means under this namespace all the class could use this enum type
+5. It works like string, int, double, decimal
+   The difference is call of enum, assign value and way of use is different with above data type
