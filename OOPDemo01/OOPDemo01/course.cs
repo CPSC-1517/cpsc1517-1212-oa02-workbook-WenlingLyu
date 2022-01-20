@@ -6,11 +6,36 @@ using System.Threading.Tasks;
 
 namespace OOPDemo01
 {
-    internal class Course
+    public class Course
     {
         #region Readonly Data Fields
         public readonly string CourseNo;
-        public readonly string CourseName;
+
+        //Define a backing filed for CourseName
+        private string _CourseName;
+        //Defina private set property for CourseName
+        public string CourseName
+        {
+            get { return _CourseName; }
+            private set //can only be changed by methods within this class. External code will not be allowed to change 
+            {
+                // Validate that courseName is not null or an empty string
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("CourseName is required.");
+                }
+                _CourseName = value.Trim();
+            }
+
+        }
+
+        /*
+         *    auto implement property example
+         *    public string Example { get; set;}
+         *    it also could be private set like:
+         *    public string Example { get; private set;}
+         * 
+         */
         //public readonly List<string> Students = new List<string>();
         public readonly List<string> Students = new List<string>();
         #endregion
@@ -40,14 +65,6 @@ namespace OOPDemo01
             }
 
             CourseNo = courseNo;
-
-
-            // Validate that courseName is not null or an empty string
-            if (string.IsNullOrEmpty(courseName))
-            {
-                throw new ArgumentNullException("CourseName is required.");
-            }
-            CourseName = courseName;
 
         }
         #endregion
@@ -125,6 +142,10 @@ namespace OOPDemo01
             return success;
         }
         #endregion
-
+        //Override ToString method 
+        public override string ToString()
+        {
+            return $"{CourseNo},{CourseName}";
+        }
     }
 }
