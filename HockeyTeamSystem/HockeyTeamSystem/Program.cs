@@ -49,6 +49,17 @@ catch (ArgumentException ex)
     WriteLine(ex.Message);
 }
 
+//Test with invaild FullName----1 character for FullName
+try
+{
+    HockeyPlayer player2 = new("A", 100, PlayerPosition.Center);
+    WriteLine("Test case failed");
+}
+catch (ArgumentException ex)
+{
+    WriteLine(ex.Message);
+}
+
 //Test with invaild FullName----whitespaces for FullName
 try
 {
@@ -60,4 +71,4 @@ catch (ArgumentException ex)
     WriteLine(ex.Message);
 }
 
-// Sam, would you please give me a example of " auto-implement property could be changed in consturctor ", like how to change it in the consturctor
+Person Person2 = new("Ab");

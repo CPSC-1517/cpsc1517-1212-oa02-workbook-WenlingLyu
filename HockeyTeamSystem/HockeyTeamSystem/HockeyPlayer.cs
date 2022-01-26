@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HockeyTeamSystem
 {
-    public class HockeyPlayer
+    public class HockeyPlayer : Person 
     {
         //backing fileds, used for store values
-        private string _fullName;
         private int _primaryNumber;
 
         //auto implement, only could be changed by constructor. Can not be changed out side the class
@@ -33,7 +32,7 @@ namespace HockeyTeamSystem
         //with readonly information
         //Validate FullName is not null, not empty, and not a whitespace
         //Validate FullName contains at minimun 3 characters
-
+        /*
         public string FullName
         {
             get { return _fullName; }
@@ -50,11 +49,11 @@ namespace HockeyTeamSystem
                 _fullName = value.Trim();
             }
         }
+        */
         //Define an greedy constructor
 
-        public HockeyPlayer(string fullName, int primaryNumber, PlayerPosition position)
+        public HockeyPlayer(string fullName, int primaryNumber, PlayerPosition position) : base(fullName)
         {
-            FullName = fullName;
             PrimaryNumber = primaryNumber;
             Position = position;
         }
