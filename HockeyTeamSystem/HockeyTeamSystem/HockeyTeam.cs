@@ -8,6 +8,22 @@ namespace HockeyTeamSystem
 {
     internal class HockeyTeam
     {
+        //Define a computed(read-only) property for TotalPoints that sums the points for
+        //each HockeyPlayer in the team
+        public int TotalPoints 
+        { get
+            {
+                int totalPoints=0;
+                foreach(HockeyPlayer currentPlayer in HockeyPlayers)
+                {
+                    totalPoints += currentPlayer.Points;
+
+                }
+                return totalPoints ; 
+            } 
+        }
+
+
         //Define a full-implement property with a backing field for the team name
         private string _teamName; //Define a private backing field for the property
         public string TeamName //Define a read-only property for TeamName
@@ -55,6 +71,7 @@ namespace HockeyTeamSystem
         }
 
         //Define a method to add a player to the team
+
         public void AddPlayer(HockeyPlayer player)
         {
             //Validate that the player is not null
@@ -70,7 +87,7 @@ namespace HockeyTeamSystem
             }
 
             //Vaildate that palyer(by primary number) is not already on the team
-            if(HockeyPlayers.)
+            //if(HockeyPlayers.)
 
 
 
