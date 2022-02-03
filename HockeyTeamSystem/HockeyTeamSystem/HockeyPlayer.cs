@@ -93,7 +93,7 @@ namespace HockeyTeamSystem
                 assists:int.Parse(tokens[4]));
         }
 
-        public static bool TryParse(string csvLineText, HockeyPlayer player)
+        public static bool TryParse(string csvLineText, out HockeyPlayer player)
         {
             bool success = false;
             try
