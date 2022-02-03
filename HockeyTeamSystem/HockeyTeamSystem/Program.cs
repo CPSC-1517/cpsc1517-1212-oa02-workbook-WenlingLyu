@@ -164,80 +164,6 @@ catch (Exception ex)
 }
 */
 
-
-/*
-//Test with valid fullname, primary number 
-HockeyPlayer player1 = new("Connor McDavid", 97, PlayerPosition.Center);
-WriteLine(player1); //The HockeyPlayer.ToString() will be invoked indirection 
-
-//Test with invaild PlayerNumber
-try
-{
-    HockeyPlayer player2 = new("Connor McDavid", 0, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-try
-{
-    HockeyPlayer player2 = new("Connor McDavid", 100, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-//Test with invaild FullName----null FullName
-try
-{
-    HockeyPlayer player2 = new(null, 100, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-//Test with invaild FullName----empty string for FullName
-try
-{
-    HockeyPlayer player2 = new("", 100, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-//Test with invaild FullName----1 character for FullName
-try
-{
-    HockeyPlayer player2 = new("A", 100, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-//Test with invaild FullName----whitespaces for FullName
-try
-{
-    HockeyPlayer player2 = new("   ", 100, PlayerPosition.Center);
-    WriteLine("Test case failed");
-}
-catch (ArgumentException ex)
-{
-    WriteLine(ex.Message);
-}
-
-Person Person2 = new("Ab");
-*/
-
 //*************JSON******************//
 static void WeiteHockeyTeamToJsonFile(HockeyTeam currentTeam, string jsonFilePath)
 {
@@ -276,7 +202,14 @@ static HockeyTeam ReadHockeyTeamFromJsonFile (string jsonFilePath)
             WriteIndented = true,
             IncludeFields = true
         };
-        currentTeam = JsonSerializer.Deserialize<HockeyTeam>(jsonString, options);
+        //currentTeam = JsonSerializer.Deserialize<HockeyTeam>(jsonString, options);
+        //solution of JS error of can not serialize a read-only property
+        currentTeam = Newtonsoft.Json.JsonConvert.DeserializeObject<HockeyTeam>(jsonString, new Newtonsoft.Json.JsonSerializerSettings()
+        {
+            ConstructorHandling = Newtonsoft.Json.ConstructorHandling.AllowNonPublicDefaultConstructor
+        });
+
+
         DispalyHockeyTeam(currentTeam);
     }
     catch(Exception ex)

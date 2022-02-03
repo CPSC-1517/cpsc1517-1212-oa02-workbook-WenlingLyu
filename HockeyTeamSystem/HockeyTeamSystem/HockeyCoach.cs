@@ -11,6 +11,7 @@ namespace HockeyTeamSystem
     {
         //Define a readonly public field that can be assigned a value
         //in the constructor
+        //[JsonInclude]
         public readonly string StartDate;
 
         //Define a greedy constructor that takes a startDate as a parameter
