@@ -73,7 +73,6 @@ static void CreateHockeyPlayersCSVFile()
     {
         WriteLine($"Error writing to CSV file with exception: {ex.Message}");
     }
-
 }
 
 //create a method to read hockey player from a csv file
