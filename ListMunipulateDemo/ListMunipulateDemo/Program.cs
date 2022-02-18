@@ -95,6 +95,26 @@ static void WriteHockeyTeamToJsonFile(HockeyTeam currentTeam, string jsonFilePat
     }
 }
 
+//Read from the JSON file we just created
+try
+{
+    JsonSerializerOptions options = new JsonSerializerOptions
+    {
+        PropertyNameCaseInsensitive = true
+    };
+    string jsonString = File.ReadAllText(hockeyTeamJSONFilePath);
+    HockeyTeam deserailizedTeam = JsonSerializer.Deserialize<HockeyTeam>(jsonString,options);
+    Console.WriteLine("Json deserialization successful");
+    Console.WriteLine(deserailizedTeam.TeamName);
+    foreach(HockeyPlayer currentPlayer in deserailizedTeam.Players)
+    {
+        Console.WriteLine(currentPlayer.ToString());
+    }
+}
+catch(Exception ex)
+{
+    Console.WriteLine($"JSON read not successfully with exception: {ex.Message}");
+}
 
 
 
