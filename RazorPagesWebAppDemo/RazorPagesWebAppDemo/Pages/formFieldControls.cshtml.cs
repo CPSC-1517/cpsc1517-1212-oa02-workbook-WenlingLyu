@@ -18,15 +18,16 @@ namespace RazorPagesWebAppDemo.Pages
         [BindProperty]
         public string ConfrimPassword { get; set; }
 
-        //Add a method to handle a HTTP post request.
-        //The method must start with On follow by the HTTP method(Get, Post, Put,Delete) to handle
-
         public void OnPost()
         {
             //Check if the password matches the confirmPassword
-            if(Password == ConfrimPassword)
+            if (Password == ConfrimPassword)
             {
                 Message = $"You submitted the following:{Username},{Password}";
+            }
+            else
+            {
+                Message = $"Password:{Password} do not match ConfrimPassword: {ConfrimPassword} ";
             }
         }
         public void OnGet()
