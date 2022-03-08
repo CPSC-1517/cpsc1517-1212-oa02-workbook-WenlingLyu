@@ -9,16 +9,27 @@ namespace HockeyTeamSystem
     public class HockeyPlayer : Person 
     {
         //backing fileds, used for store values
-        private int _primaryNumber;
+        private int _primaryNumber;  ///////filed ///////
 
         //auto implement, only could be changed by constructor. Can not be changed out side the class
         public PlayerPosition Position { get; private set; }
+        //////////private set means it could be only assign inside a constructor or in a method of the class///////////
+        //////////fields can be declared as read-only where you must assign a value when you declare the field or in the constructor//////////////////
         //Define properties with private set for Goals, Assists
         public int Goals { get; private set; }
-        public int Assists { get; private set; }
+        public int Assists { get; private set; }  
+        /*
+         * line 15 17 18
+         * called auto-implement properties
+         * 
+         */
 
         //Define a read-only property for Points (Goals + Assists)
         public int Points { get { return Goals + Assists; } }
+        /* line 26 
+         * 
+         * read only property
+         */
 
 
         //Fully implement property
@@ -76,6 +87,13 @@ namespace HockeyTeamSystem
         //A static (class-level) method can be accessd ditectly without creating an instance
         //obeject for the class. For example we can:
         //HockeyPlayer currentPlayer = HockeyPlayer.Parse("...")
+
+        /*
+         * 
+         * review parse/try parse here
+         * 
+         * 
+         */
         public static HockeyPlayer Parse(string csvLineText)
         {
             const char Delimeter = ',';
@@ -96,6 +114,11 @@ namespace HockeyTeamSystem
         public static bool TryParse(string csvLineText, out HockeyPlayer player)
         {
             bool success = false;
+            /*
+             * success
+             * this called local variable
+             * cuz this is design inside the program
+             */
             try
             {
                 player = Parse(csvLineText);

@@ -27,6 +27,11 @@ namespace HockeyTeamSystem
         //Define a full-implement property with a backing field for the team name
         private string _teamName; //Define a private backing field for the property
         public string TeamName //Define a read-only property for TeamName
+            /*
+             * 
+             * line 29 works as a fully implement property: a property with a backing filed
+             * 
+             */
         {
             get { return _teamName; }
             private set
@@ -72,6 +77,12 @@ namespace HockeyTeamSystem
 
         //Define a method to add a player to the team
 
+        /*
+         * review addplayer on this 
+         * also could reveiw validate part on ex2 
+         * I did not write how to validate duplicate name on this method
+         * now I add it
+         */
         public void AddPlayer(HockeyPlayer player)
         {
             //Validate that the player is not null
@@ -87,8 +98,13 @@ namespace HockeyTeamSystem
             }
 
             //Vaildate that palyer(by primary number) is not already on the team
-            //if(HockeyPlayers.)
-
+            foreach(var currentPlayer in HockeyPlayers)
+            {
+                if(currentPlayer.PrimaryNumber == player.PrimaryNumber)
+                {
+                    throw new ArgumentException("Team has this player already, provide a new member");
+                }
+            }
 
 
             HockeyPlayers.Add(player);

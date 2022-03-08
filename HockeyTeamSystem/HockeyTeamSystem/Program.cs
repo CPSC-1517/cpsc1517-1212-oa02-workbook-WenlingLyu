@@ -76,11 +76,15 @@ static void CreateHockeyPlayersCSVFile()
 }
 
 //create a method to read hockey player from a csv file
-static HockeyTeam ReadHockeyPlayerCSVFile(string csvFilePath)
+static HockeyTeam ReadHockeyPlayerCSVFile(string csvFilePath) /* 这里的叫 parameter，当define a method，叫做parameter */ 
 {
     HockeyCoach coach1 = new HockeyCoach("Dave Tippet", "May 28,2019");
     HockeyTeam team1 = new("Edmonton Oilers", TeamDivison.Pacific, coach1);
-
+    /*
+     * 当 call a method， 叫做argument
+     * 括号里面的叫argument
+     * 当 passing a value to a method，those value are called argument
+     */
     try
     {
         // Read all the lines from the file and retuan an array of string values for each line
