@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;//for Key
 
 namespace WestwindSystem.Entities
 {
-    [Table("BuildVersion")]
+    //[Table("BuildVersion")]
     public class BuildVersion
     {
         [Key]
@@ -11,7 +11,7 @@ namespace WestwindSystem.Entities
         public int Major { get; set; }
         public int Minor { get; set; }
         public int Build { get; set; }
-        public DateTime ReleaseDat { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
     }
 }
