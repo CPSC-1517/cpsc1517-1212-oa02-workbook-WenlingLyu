@@ -19,7 +19,7 @@ namespace WestwindSystem.BLL
 
         public BuildVersion? GetBuildVersion() //cause firstOrdefault could return null, so ? means nullable
         {
-            return _context.BuildVersions.FirstOrDefault(); //return first or null(default)
+            return _context.BuildVersion.FirstOrDefault(); //return first or null(default)
         }
     }
 }
