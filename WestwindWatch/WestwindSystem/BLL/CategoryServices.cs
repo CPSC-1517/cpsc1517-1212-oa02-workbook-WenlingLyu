@@ -1,8 +1,10 @@
-﻿using WestwindSystem.DAL; // for WestwindContext
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using WestwindSystem.DAL; // for WestwindContext
 using WestwindSystem.Entities; // for Category
 
 namespace WestwindSystem.BLL
 {
+    [Table("Categories")]
     public class CategoryServices
     {
         #region Setup a dbcontext using dependency injection 
@@ -15,9 +17,19 @@ namespace WestwindSystem.BLL
             _context = context;
         }
         #endregion
-        public List<Category> GetAllCategory()
+        public List<Category> Category_List()
         {
-            return _context.Categories.ToList();
+            return _context
+                .Categories
+                .OrderBy(currentItem=> currentItem.CategoryName)
+                .ToList();
+        }
+        public Category Category_GetById(int categoryId)
+        {
+            return _context
+                .Categories
+                .Where(currentItem => currentItem.CategoryID == categoryId)
+                .FirstOrDefault();
         }
     }
 }

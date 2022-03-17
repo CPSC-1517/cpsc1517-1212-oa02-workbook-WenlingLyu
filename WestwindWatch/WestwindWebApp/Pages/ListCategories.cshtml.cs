@@ -16,7 +16,7 @@ namespace WestwindWebApp.Pages
         public List<Category>WestwindCategories { get; private set; }
         public void OnGet()
         {
-            WestwindCategories = _categoryServices.GetAllCategory();
+            WestwindCategories = _categoryServices.Category_List();
         }
     }
 }

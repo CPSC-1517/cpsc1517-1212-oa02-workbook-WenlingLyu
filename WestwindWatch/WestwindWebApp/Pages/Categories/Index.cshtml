@@ -1,0 +1,40 @@
+﻿@page
+@model WestwindWebApp.Pages.Categories.IndexModel
+@{
+}
+
+<h1>Westwind Categories</h1>
+
+<h2>Table of Categories</h2>
+<table>
+    <thead>
+        <tr>
+            <th>CategoryID</th>
+            <th>CategoryName</th>
+            <th>CategoryDescription</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.CategoryList)
+        {
+            <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Menu option of Categories</h2>
+Select a Category:
+<select>
+    @foreach(var item in Model.CategoryList)
+       {
+           <option value = "@item.CategoryID">@item.CategoryName</option>  
+       }
+</select>
+
+<h2>Category Query By ID</h2>
+
+<h2>Catogory Query By Partial Description</h2>

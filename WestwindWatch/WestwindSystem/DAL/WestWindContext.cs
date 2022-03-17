@@ -14,7 +14,9 @@ namespace WestwindSystem.DAL
         {
             
         }
+        //Dbset manage a set of entity objects 
         public DbSet<Category> Categories { get; set; } = null!; //Dbset means the data base we want to access
+        public DbSet<Region> Regions { get; set; } = null!;
         public DbSet<BuildVersion>BuildVersion { get; set; } = null!;
     }
 }
