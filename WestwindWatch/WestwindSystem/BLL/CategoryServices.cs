@@ -11,6 +11,7 @@ namespace WestwindSystem.BLL
         // Define a readonly field for the database context that will be assiged 
         // a value in the constructor
         private readonly WestwindContext _context;
+        public object CategoryId;
 
         internal CategoryServices(WestwindContext context)
         {
@@ -30,6 +31,14 @@ namespace WestwindSystem.BLL
                 .Categories
                 .Where(currentItem => currentItem.CategoryID == categoryId)
                 .FirstOrDefault();
+        }
+
+        public List<Category>Category_GetByPartialDescription(string partialDescription)
+        {
+            return _context
+                .Categories
+                .Where(currentItem => currentItem.Description.Contains(partialDescription))
+                .ToList();
         }
     }
 }

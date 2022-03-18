@@ -5,3 +5,22 @@
 
 @*table of region 
 selection menu of region name*@
+
+<h2>Table of Regions</h2>
+<table>
+    <thead>
+        <tr>
+            <th>RegionID</th>
+            <th>RegionDescription</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.RegionList)
+        {
+            <tr>
+            <td>@item.RegionId</td>
+            <td>@item.RegionDescription</td>
+            </tr>
+        }
+    </tbody>
+</table>

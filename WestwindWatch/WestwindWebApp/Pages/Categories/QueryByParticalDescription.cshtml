@@ -1,0 +1,16 @@
+﻿@page
+@model WestwindWebApp.Pages.Categories.QueryByParticalDescriptionModel
+@{
+}
+<h1>Categeory Query by Partial Description (CategoryID)</h1>
+<p>@Model.FeedbackMessage</p>
+<p>@Html.Raw(Model.FeedbackMessage)</p>
+
+@if(Model.SearchResultList.Count>0)
+
+<form method="post">    
+    <label>Enter Description:</label>    
+    <input type="texT"   asp-for="SearchValue"        placeholder="enter description here"        required />    
+    <button type="submit" asp-page-handler="Fetch">Fetch By Description</button>
+    <button type="submit" asp-page-handler = "Clear">Clear</button>
+</form>
