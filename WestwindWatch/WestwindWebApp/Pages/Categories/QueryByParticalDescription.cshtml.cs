@@ -1,50 +1,55 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WestwindSystem.BLL;
-using WestwindSystem.Entities;
+
+using WestwindSystem.BLL;       // for CategoryServices
+using WestwindSystem.Entities;  // for Category
 
 namespace WestwindWebApp.Pages.Categories
 {
-    public class QueryByParticalDescriptionModel : PageModel
+    public class QueryByPartialDescriptionModel : PageModel
     {
-
+        // Define a readonly field for CategoryServices
         private readonly CategoryServices _categoryServices;
 
-        public QueryByParticalDescriptionModel(CategoryServices categoryServices)
+        public QueryByPartialDescriptionModel(CategoryServices categoryServices)
         {
             _categoryServices = categoryServices;
         }
+
+        [TempData]
         public string FeedbackMessage { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string SearchValue { get; set; }
+
         public List<Category> SearchResultList { get; set; } = new();
+
         public IActionResult OnPostFetch()
         {
-            // Check if the search value is valid
-            if (string.IsNullOrEmpty(SearchValue))
+            if (string.IsNullOrWhiteSpace(SearchValue))
             {
                 FeedbackMessage = "Search value is required";
             }
-            return RedirectToPage(new { searchValue = SearchValue });
+            return RedirectToPage(new { SearchValue = SearchValue });
         }
 
         public IActionResult OnPostClear()
         {
             FeedbackMessage = "";
+            SearchResultList.Clear();
             ModelState.Clear();
-            return RedirectToPage(new { searchValue = (string?)null });
+            return RedirectToPage();
         }
+
         public void OnGet()
         {
             if (!string.IsNullOrWhiteSpace(SearchValue))
             {
                 SearchResultList = _categoryServices.Category_GetByPartialDescription(SearchValue);
-                if(SearchResultList.Count == 0)
+                if (SearchResultList.Count == 0)
                 {
-                    FeedbackMessage = "No results returned";
+                    FeedbackMessage = "No results returned.";
                 }
-
             }
         }
     }

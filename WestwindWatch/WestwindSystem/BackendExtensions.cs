@@ -32,6 +32,18 @@ namespace WestwindSystem
                 var context = serviceProvider.GetService<WestwindContext>();
                 return new CategoryServices(context);
             });
+
+            services.AddTransient<RegionServices>((ServiceProvider) =>
+            {
+                var context = ServiceProvider.GetService<WestwindContext>();
+                return new RegionServices(context);
+            });
+
+            //register bll class for territoryServices
+            services.AddTransient<TerritoryServices>((serviceProvider) => {
+                var context = serviceProvider.GetService<WestwindContext>();
+                return new TerritoryServices(context);
+            });
         }
     }
 }

@@ -18,5 +18,6 @@ namespace WestwindSystem.DAL
         public DbSet<Category> Categories { get; set; } = null!; //Dbset means the data base we want to access
         public DbSet<Region> Regions { get; set; } = null!;
         public DbSet<BuildVersion>BuildVersion { get; set; } = null!;
+        public DbSet<Territory> Territories { get; set; } = null!;
     }
 }
