@@ -17,6 +17,7 @@ namespace WestWindSystem.Entities
         public string CategoryName { get; set; } = null!;
 
         public  string? Description { get; set; } // ? behind the string means it is nullable
+        // the name of null! is called null forgiving operator
 
         //public byte[] Picture { get; set; } // byte[] is for picture
 

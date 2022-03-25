@@ -1,4 +1,15 @@
+#region add namespace for backendDependencies
+using WestWindSystem;
+using Microsoft.EntityFrameworkCore;
+#endregion
+
 var builder = WebApplication.CreateBuilder(args);
+
+#region  Setup database connection for backEnd to use
+//Add connectionstring here
+var connectionstring = builder.Configuration.GetConnectionString("WestWindDatabase");
+builder.Services.BackendDependencies(options => options.UseSqlServer(connectionstring));
+#endregion
 
 // Add services to the container.
 builder.Services.AddRazorPages();

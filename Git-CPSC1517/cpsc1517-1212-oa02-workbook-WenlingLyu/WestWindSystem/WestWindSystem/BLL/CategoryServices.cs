@@ -17,10 +17,14 @@ namespace WestWindSystem.BLL
         //Step2: Define methods that uses the DbContext
         public List<Category> Category_List()
         {
-            IEnumerable<Category> resultListQuery = _dbContext
+            //IEnumerable<Category> resultListQuery = _dbContext
+            //    .Categories
+            //    .OrderBy(item => item.CategoryName);
+            //return resultListQuery.ToList();
+            return _dbContext
                 .Categories
-                .OrderBy(item => item.CategoryName);
-            return resultListQuery.ToList();
+                .OrderBy(item => item.CategoryName)
+                .ToList();
         }
 
         public Category Category_GetById(int categoryID)
