@@ -1,0 +1,12 @@
+D:\CPSC1517\WestwindWatch\WestwindSystem\bin\Debug\net6.0\WestwindSystem.deps.json
+D:\CPSC1517\WestwindWatch\WestwindSystem\bin\Debug\net6.0\WestwindSystem.dll
+D:\CPSC1517\WestwindWatch\WestwindSystem\bin\Debug\net6.0\ref\WestwindSystem.dll
+D:\CPSC1517\WestwindWatch\WestwindSystem\bin\Debug\net6.0\WestwindSystem.pdb
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.csproj.AssemblyReference.cache
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.AssemblyInfoInputs.cache
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.AssemblyInfo.cs
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.csproj.CoreCompileInputs.cache
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.dll
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\ref\WestwindSystem.dll
+D:\CPSC1517\WestwindWatch\WestwindSystem\obj\Debug\net6.0\WestwindSystem.pdb

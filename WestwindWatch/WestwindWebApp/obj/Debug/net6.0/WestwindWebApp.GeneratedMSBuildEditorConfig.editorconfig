@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WestwindWebApp
+build_property.RootNamespace = WestwindWebApp
+build_property.ProjectDir = D:\CPSC1517\WestwindWatch\WestwindWebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\CPSC1517\WestwindWatch\WestwindWebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Categories/QueryById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xRdWVyeUJ5SWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Categories/QueryByParticalDescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xRdWVyeUJ5UGFydGljYWxEZXNjcmlwdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/ListCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Regions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Regions/RegionQueryOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25RdWVyeU9uZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Samples/BasicDatamanagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xCYXNpY0RhdGFtYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CPSC1517/WestwindWatch/WestwindWebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dxy9cmmqqk

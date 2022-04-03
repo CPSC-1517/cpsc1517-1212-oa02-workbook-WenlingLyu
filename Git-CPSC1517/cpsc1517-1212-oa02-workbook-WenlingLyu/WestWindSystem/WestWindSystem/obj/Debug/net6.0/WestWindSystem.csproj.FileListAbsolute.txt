@@ -1,0 +1,12 @@
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\bin\Debug\net6.0\WestWindSystem.deps.json
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\bin\Debug\net6.0\WestWindSystem.dll
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\bin\Debug\net6.0\ref\WestWindSystem.dll
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\bin\Debug\net6.0\WestWindSystem.pdb
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.csproj.AssemblyReference.cache
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.AssemblyInfoInputs.cache
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.AssemblyInfo.cs
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.csproj.CoreCompileInputs.cache
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.dll
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\ref\WestWindSystem.dll
+D:\CPSC1517\Git-CPSC1517\cpsc1517-1212-oa02-workbook-WenlingLyu\WestWindSystem\WestWindSystem\obj\Debug\net6.0\WestWindSystem.pdb

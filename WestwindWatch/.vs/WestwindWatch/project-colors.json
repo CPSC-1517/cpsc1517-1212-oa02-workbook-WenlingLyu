@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dbcce88f-3399-4811-9ddc-ad3428472fe8": {
+      "ProjectGuid": "dbcce88f-3399-4811-9ddc-ad3428472fe8",
+      "DisplayName": "WestwindWebApp",
+      "ColorIndex": 0
+    },
+    "f2982967-d8d7-4b92-a42d-7c6955f17223": {
+      "ProjectGuid": "f2982967-d8d7-4b92-a42d-7c6955f17223",
+      "DisplayName": "WestwindSystem",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
