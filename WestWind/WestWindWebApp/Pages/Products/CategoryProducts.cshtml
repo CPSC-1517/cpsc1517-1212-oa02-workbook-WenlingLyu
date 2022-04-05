@@ -4,6 +4,8 @@
     ViewData["Title"] = "Category Products";
 }
 
+<p>@Model.FeedbackMessage</p>
+
 <form method="post">
     <label for="SelectedCategoryID">
         Select a category
@@ -29,34 +31,47 @@
     @* Write code to display the Product Name, Supplier Name, Unit Size, Discontinued
         for each product and selected category
     *@
-    <button type="submit" asp-page-handler="Fetch">Fetch Products</button>
-    <button type="submit" asp-page-handler="Clear" formvalidate>Clear</button>
-    <button type="submit" asp-page-handler="New" formvalidate>New Product</button>
 
-    
-    @if(Model.ProductList.Count> 0)
+        @if(Model.CategoryProductList.Count> 0)
     {
         <table>
             <thead>
                 <tr>
-                    <th>ProductName</th>
-                    <th>SupplierName</th>
-                    <th>UnitSize</th>
+                    <th>Product Name</th>
+                    <th>Supplier Name</th>
+                    <th>Unit Size</th>
                     <th>Discontinued</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach(var item in Model.ProductList)
+                @foreach(var cuurentProduct in Model.CategoryProductList)
                 {
                     <tr>
-                        <td>@item.ProductName</td>
-                        <td>@item.Supplier</td>
-                        <td>@item.UnitsOnOrder</td>
-                        <td>@item.Discontinued</td>
+                        <td>@cuurentProduct.ProductName</td>
+                        <td>
+                            <select disabled="disabled">
+                                @foreach(var currentSupplier in Model.SupplierList)
+                                {
+                                    <option value="@currentSupplier.SupplierID"
+                                    selected=@(currentSupplier.SupplierID == cuurentProduct.SupplierID)>
+                                    @currentSupplier.CompanyName
+                                    </option>
+                                }
+                            </select>
+                        </td>
+                        <td>@cuurentProduct.QuantityPerUnit</td>
+                        <td><input type="checkbox" checked="@cuurentProduct.Discontinued"></td>
                     </tr>
                 }
             </tbody>
         </table>    
     }
+
+    <button type="submit" asp-page-handler="Fetch">Fetch Products</button>
+    <button type="submit" asp-page-handler="Clear" formvalidate>Clear</button>
+    <button type="submit" asp-page-handler="New" formvalidate>New Product</button>
+
+    
+
 
 </form>
