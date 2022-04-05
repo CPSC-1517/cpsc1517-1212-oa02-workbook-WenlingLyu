@@ -1,0 +1,62 @@
+﻿@page "{SelectedCategoryID?}"
+@model WestWindWebApp.Pages.Products.CategoryProductsModel
+@{
+    ViewData["Title"] = "Category Products";
+}
+
+<form method="post">
+    <label for="SelectedCategoryID">
+        Select a category
+        <select asp-for="SelectedCategoryId">
+            <option value="0">select...</option>
+            @foreach(var item in Model.CategoryList)
+            {
+                if(item.CategoryID == Model.SelectedCategoryId)
+                {
+                    <option value="@item.CategoryID" selected="selected">
+                        @item.CategoryName
+                    </option>
+                }
+                else
+                {
+                    <option value="@item.CategoryID">
+                        @item.CategoryName
+                    </option>
+                }
+            }
+        </select>        
+    </label>
+    @* Write code to display the Product Name, Supplier Name, Unit Size, Discontinued
+        for each product and selected category
+    *@
+    <button type="submit" asp-page-handler="Fetch">Fetch Products</button>
+    <button type="submit" asp-page-handler="Clear" formvalidate>Clear</button>
+    <button type="submit" asp-page-handler="New" formvalidate>New Product</button>
+
+    
+    @if(Model.ProductList.Count> 0)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>ProductName</th>
+                    <th>SupplierName</th>
+                    <th>UnitSize</th>
+                    <th>Discontinued</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model.ProductList)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.Supplier</td>
+                        <td>@item.UnitsOnOrder</td>
+                        <td>@item.Discontinued</td>
+                    </tr>
+                }
+            </tbody>
+        </table>    
+    }
+
+</form>
