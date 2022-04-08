@@ -74,7 +74,6 @@ namespace WestWindWebApp.Helpers
         ///<summary>PreviousPage is the human-friendly page number for the next available page</summary>
         public int PreviousPage { get { return CurrentState.CurrentPage > FirstPage ? CurrentState.CurrentPage - 1 : FirstPage; } }
 
-
         ///<summary>FirstPageNumber is the first page number in the set of Page Links</summary>
         public int FirstPageNumber
         {
